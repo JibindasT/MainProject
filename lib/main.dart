@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           backgroundColor:
               const Color.fromARGB(255, 0, 0, 0), // Set red background
-          selectedItemColor: Colors.orange,
+          selectedItemColor: const Color.fromARGB(255, 250, 151, 4),
           unselectedItemColor: Colors.white,
         ),
       ),
