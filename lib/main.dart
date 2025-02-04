@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:main_project/Profile.dart';
 import 'package:main_project/insight.dart';
+import 'package:main_project/login.dart';
 import 'package:main_project/menu.dart';
 import 'img_upload.dart';
-import 'login.dart';
-import 'signup.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,6 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/home',
       routes: {
+        // '/login': (context) => LoginPage(), // Define the login route
         '/home': (context) => ImageScreen(),
         '/activities': (context) => insightPage(),
         '/menu': (context) => menuPage(),
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           unselectedItemColor: Colors.white,
         ),
       ),
-      home: ImageScreen(),
+      home: LoginPage(),
     );
   }
 }

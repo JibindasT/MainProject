@@ -10,7 +10,7 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  int _selectedIndex = 3; // Profile page is at index 3
+  final int _selectedIndex = 3; // Profile page is at index 3
 
   File? _profileImage;
   final TextEditingController _nameController = TextEditingController();
@@ -33,6 +33,12 @@ class _ProfilePageState extends State<ProfilePage> {
     // Handle logout logic here (e.g., clear session, navigate to login page)
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text("Logged out")));
+  }
+
+  //Function to handle save
+  void _save() {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text("Saved")));
   }
 
   // Navigation Logic
@@ -59,7 +65,11 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Profile')),
+      appBar: AppBar(
+        title: const Text('Profile'),
+        backgroundColor: Color.fromARGB(255, 22, 89, 83),
+        foregroundColor: Colors.white,
+      ),
 
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -126,14 +136,30 @@ class _ProfilePageState extends State<ProfilePage> {
 
                 // Logout Button
                 ElevatedButton(
-                  onPressed: _logout,
-                  child: const Text("Logout"),
+                  onPressed: _save,
                   style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: const Color.fromARGB(255, 3, 188, 22),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 50, vertical: 14),
+                  ),
+                  child: const Text("  Save  "),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+
+                // Logout Button
+                ElevatedButton(
+                  onPressed: _logout,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
                     backgroundColor:
                         Colors.red, // Red color for the logout button
                     padding: const EdgeInsets.symmetric(
                         horizontal: 50, vertical: 15),
                   ),
+                  child: const Text("Logout"),
                 ),
               ],
             ),

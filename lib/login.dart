@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                       width: 400,
                       height: 650,
                       decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 223, 223, 223),
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(60),
                       ),
                     ),
@@ -86,7 +86,25 @@ class _LoginPageState extends State<LoginPage> {
                                       borderRadius: BorderRadius.circular(30),
                                     ),
                                     filled: true,
-                                    fillColor: Colors.white,
+                                    fillColor:
+                                        Color.fromARGB(255, 223, 223, 223),
+                                    // Set border color to match the fill color
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                      borderSide: BorderSide(
+                                          color: Color.fromARGB(
+                                              255, 223, 223, 223),
+                                          width:
+                                              2), // Border color same as fill
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                      borderSide: BorderSide(
+                                          color: Color.fromARGB(
+                                              255, 223, 223, 223),
+                                          width:
+                                              2), // Border color same as fill
+                                    ),
                                   ),
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
@@ -111,7 +129,25 @@ class _LoginPageState extends State<LoginPage> {
                                       borderRadius: BorderRadius.circular(30),
                                     ),
                                     filled: true,
-                                    fillColor: Colors.white,
+
+                                    fillColor:
+                                        Color.fromARGB(255, 223, 223, 223),
+                                    // Set border color to match the fill color
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                      borderSide: BorderSide(
+                                          color: Color.fromARGB(
+                                              255, 223, 223, 223),
+                                          width:
+                                              2), // Border color same as fill
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(30),
+                                      borderSide: BorderSide(
+                                          color: Colors.white,
+                                          width:
+                                              2), // Border color same as fill
+                                    ),
                                   ),
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {

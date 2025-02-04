@@ -4,6 +4,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:main_project/Profile.dart';
 
 class ImageScreen extends StatefulWidget {
+  const ImageScreen({super.key});
+
   @override
   _ImageScreenState createState() => _ImageScreenState();
 }
@@ -102,7 +104,7 @@ class _ImageScreenState extends State<ImageScreen> {
 
             // Annotation text field
 
-            Container(
+            SizedBox(
               height: 150,
               child: SingleChildScrollView(
                 child: TextField(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class insightPage extends StatefulWidget {
+  const insightPage({super.key});
+
   @override
   _insightPageState createState() => _insightPageState();
 }
@@ -39,18 +41,22 @@ class _insightPageState extends State<insightPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Insight Page')),
+      appBar: AppBar(
+        title: const Text('Insight Page'),
+        foregroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(255, 22, 89, 83),
+      ),
       body: Center(
         child:
             const Text('Back to Insight Page', style: TextStyle(fontSize: 24)),
       ),
       bottomNavigationBar: Container(
-        color: Colors.black,
+        color: const Color.fromARGB(255, 255, 255, 255),
         child: BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
           selectedItemColor: Colors.orange,
-          unselectedItemColor: Colors.white,
+          unselectedItemColor: const Color.fromARGB(255, 255, 255, 255),
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
