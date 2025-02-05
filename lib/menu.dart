@@ -40,7 +40,11 @@ class _menuPageState extends State<menuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Menu Page')),
+      appBar: AppBar(
+        title: const Text('Menu Page'),
+        backgroundColor: Color.fromARGB(255, 22, 89, 83),
+        foregroundColor: Colors.white,
+      ),
       body: Center(
         child: const Text('Back to Menu Page', style: TextStyle(fontSize: 24)),
       ),
