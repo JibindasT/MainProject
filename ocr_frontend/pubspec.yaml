@@ -1,0 +1,35 @@
+name: main_project
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.0.0+4
+  path_provider: ^2.0.11  
+    
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/  # Path to your font files
+  
+  fonts:
+    - family: Righteous
+      fonts:
+        - asset: assets/fonts/Righteous.ttf
+        - asset: assets/fonts/cursive.ttf      
+
